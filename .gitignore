@@ -1,0 +1,16 @@
+*~
+[#]*[#]
+.\#*
+*.pyc
+*.log
+*.aux
+*.out
+auto/
+
+.ipynb_checkpoints/
+build/
+__pycache__/
+
+blu
+old.*
+test*

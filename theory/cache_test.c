@@ -7,15 +7,16 @@ void main(){
   double time=0.;
   clock_t begin, end;
   
+  int ncol=2, nrow=3;
   double density[2][3] = {{0.}};
-
+  
   // Populate the array with random numbers from 0 to 99 with rand()%100
 
   begin = clock();
-  // In the 'bad' way
-  for(i=0 ; i<3 ;i++){
-    for (j=0; j<2; j++){
-       density[j][i]=rand()%100;  
+  // Get the density in the 'bad' way
+  for(i=nrow-1 ; i>=0 ;i--){
+    for (j=0; j<ncol; j++){
+       density[j][i]=rand()%100;
     }
   }
   end = clock();
@@ -23,10 +24,10 @@ void main(){
   printf("Time 'bad' way=%E ms \n",time);
   
   begin = clock();
-  // In the 'good' way
-  for(i=0 ; i<3 ;i++){
-    for (j=0; j<2; j++){
-       density[j][i]=rand()%100;   
+  // Get the density in the 'good' way
+  for (j=0; j<ncol; j++){
+    for(i=0 ; i<nrow ;i++){
+       density[j][i]=rand()%100;
     }
   }
   end = clock();

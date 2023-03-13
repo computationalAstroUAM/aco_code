@@ -2,17 +2,17 @@ Programs to test the theory ACO classes
 
 *hello.c* Hello world program in C
 
-*hello_openmp.c* Each of the cores in your computer say hello
-
 *bitshift_test.c* Test what the bitshift function does
 
-*cpi_test.c* Test the difference in computational time of using x*x*x or pow(x,3)
+*pow_test.c* Test the difference in computational time of using x*x*x or pow(x,3)
 
 *cache_test.c* Test the difference of cache miss or hit.
 
 *serial_2a.c* Program that generates an array of elements 2*(previous element)
 
 *serial_b.c* The same as serial_2a.c but having independent tasks.
+
+*hello_openmp.c* Each of the cores in your computer say hello
 
 *par_b.c* Parallelisation of serial_b.c 
 

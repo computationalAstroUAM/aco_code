@@ -20,7 +20,8 @@ void main(){
   double start = omp_get_wtime();
   int i,j;
   float b;
-#pragma omp parallel private(i,j) shared(a,b) 
+  omp_set_num_threads(3);
+#pragma omp parallel 
   {
     int ID = omp_get_thread_num();
 

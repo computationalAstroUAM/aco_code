@@ -6,8 +6,7 @@ void main(){
   #pragma omp parallel
   {
     int ID = omp_get_thread_num(); // returns the thread number
-    printf("hello(%d)", ID);
-    printf("world(%d)\n", ID);
+    printf("Hello world from thread %d \n", ID);
   }
 }
   

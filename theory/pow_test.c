@@ -1,4 +1,4 @@
-// gcc -o p test_cpi.c -lm
+// gcc -o p test_cpi.c -lm 
 #include <stdio.h>
 #include <math.h>
 #include <time.h>

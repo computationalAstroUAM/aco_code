@@ -14,7 +14,7 @@ void main(){
   
   a[0] = STARTVALUE;
 
-  #pragma omp parallel
+#pragma omp parallel 
   {
     int ID = omp_get_thread_num();
     # pragma omp for

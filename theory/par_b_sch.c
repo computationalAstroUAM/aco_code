@@ -21,7 +21,7 @@ void main(){
   omp_set_num_threads(3); int chunk=3;
   int i,j;
   float b;
-#pragma omp parallel private(i,j) shared(a,b) 
+#pragma omp parallel omp_se
   {
     int ID = omp_get_thread_num();
 

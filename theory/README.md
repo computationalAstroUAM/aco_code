@@ -22,7 +22,6 @@ Programs to test the theory ACO classes
 
 *par_b_func.c* As par_b.c writing the independent task into a function
 
-*par_b_sch.c* As par_b.c, to explore the option to schedule
 
 
 

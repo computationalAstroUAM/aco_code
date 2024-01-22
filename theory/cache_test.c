@@ -1,3 +1,4 @@
+// gcc -o p cache_test.c -lm
 #include <stdio.h>
 #include <stdlib.h> //Includes the rand() library
 #include <time.h>

@@ -1,4 +1,4 @@
-// Compilation: g++ -o p -fopenmp par_b.cpp
+// Compilation: g++ -o p -fopenmp par_b_vars.cpp
 #include <iostream>
 #include <chrono>
 #include <iomanip>
@@ -12,19 +12,23 @@ int main(){
   
   int N = 10;
   float a[N] = {0.};
-  
+
+  // Wall time
   double walltime=0.;
   high_resolution_clock::time_point begin, end;
   begin = high_resolution_clock::now(); // Start the timer
-
+  double start_omp = omp_get_wtime(); // OpenMP time
+  
   // Populate the vector a
   a[0] = STARTVALUE;
-  #pragma omp parallel 
+  int i,j;
+  float b;
+  #pragma omp parallel private(i,j) shared(a,b) 
   {
     int ID = omp_get_thread_num();
-    # pragma omp for
+    # pragma omp for 
     for(int i=1; i<N; i++){
-      float b = a[0];
+      b = a[0];
       for(int j=0; j<i; j++){
 	b = 2*b ;
       }
@@ -35,11 +39,15 @@ int main(){
     }
   } // end of parallel section
 
+
   // Measure the wall time
+  double end_omp = omp_get_wtime(); // OpenMP time
   end = high_resolution_clock::now();   // End the timer
+
+  double timeomp = end_omp - start_omp; //seconds OpenMP
   walltime = duration_cast<nanoseconds>(end - begin).count();
-  cout << scientific << setprecision(2);
-  cout << endl << walltime*1e-6  <<" ms running the code" << endl;  
+  cout << endl << "Chrono wall time = " << walltime*1e-6  <<" ms" << endl;
+  cout << "OpenMP wall time = " << timeomp*1000.   <<" ms" << endl;
 
   // Print the results
   cout << fixed << setprecision(0);
@@ -47,7 +55,7 @@ int main(){
   for(int i=0; i<N; i++){
     cout << "a[" << i << "] = " << a[i] << endl;
   }
-  
+
   return 0;
 }
   

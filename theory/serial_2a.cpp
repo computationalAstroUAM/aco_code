@@ -1,4 +1,4 @@
-// g++ -o p serial_2a.cpp
+// Compilation: g++ -o p serial_2a.cpp
 #include <iostream>
 #include <chrono>
 #include <iomanip>

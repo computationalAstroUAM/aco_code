@@ -1,3 +1,4 @@
+// Compilation: g++ -o p bitshift_test.cpp 
 #include <iostream>
 using namespace std;
 

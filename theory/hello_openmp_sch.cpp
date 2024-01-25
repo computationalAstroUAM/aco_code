@@ -1,4 +1,4 @@
-// g++ -o p -fopenmp hello_openmp_sch.cpp 
+// Compilation: g++ -o p -fopenmp hello_openmp_sch.cpp 
 #include <iostream>
 #include <omp.h> // Include the OpenMP library
 

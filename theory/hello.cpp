@@ -1,3 +1,4 @@
+// Compilation: g++ -o p hello.cpp
 #include <iostream> 
 using namespace std;
 

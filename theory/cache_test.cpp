@@ -1,4 +1,4 @@
-// g++ -o p cache_test.cpp; ./p
+// Compilation: g++ -o p cache_test.cpp
 #include <iostream>
 #include <cmath>
 #include <chrono>

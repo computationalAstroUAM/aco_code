@@ -18,9 +18,9 @@ Programs to test the theory ACO classes
 
 *par_b.cpp* Parallelisation of serial_b.c 
 
-*par_b_vars.c* Parallelisation of serial_b.c to play with having private and shared variables.
+*par_b_vars.cpp* Parallelisation of serial_b.c to play with having private and shared variables.
 
-*par_b_func.c* As par_b.c writing the independent task into a function
+*par_b_func.cpp* As par_b.c writing the independent task into a function
 
 
 

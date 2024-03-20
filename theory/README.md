@@ -1,4 +1,4 @@
-Programs to test the theory ACO classes
+Programs to test during the theory ACO classes
 
 *hello.cpp* Hello world program in C++
 

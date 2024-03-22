@@ -39,7 +39,7 @@ int main(){
   end = high_resolution_clock::now();   // End the timer
   walltime = duration_cast<nanoseconds>(end - begin).count();
   cout << scientific << setprecision(2);
-  cout << endl << walltime*1e-6  <<" ms running the code" << endl;  
+  cout << endl << walltime  <<" ns running the code" << endl;  
 
   // Print the results
   cout << fixed << setprecision(0);

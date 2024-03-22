@@ -14,9 +14,9 @@ int main(){
   high_resolution_clock::time_point begin, end;
   
   int nrow=2, ncol=3;
-  double DD[2][3] = {{0.}};
+  int DD[nrow][ncol] = {{0}};
 
-  //cout << scientific << setprecision(2);
+  cout << scientific << setprecision(2);
 
   // Create a random number generator engine
   random_device rd;  // Seed generator
@@ -33,7 +33,7 @@ int main(){
   }
   end = high_resolution_clock::now();   // End the timer
   time = duration_cast<nanoseconds>(end - begin).count();   
-  cout << time*1e-6  <<" ms for reversed and bad data alligment loop" << endl;
+  cout << time  <<" ns for reversed and bad data alligment loop" << endl;
 
   // Populate array in reverse order and good data alligment
   begin = high_resolution_clock::now(); // Start the timer
@@ -44,7 +44,7 @@ int main(){
   }
   end = high_resolution_clock::now();   // End the timer
   time = duration_cast<nanoseconds>(end - begin).count();   
-  cout << time*1e-6  <<" ms for reversed and good data alligment loop" << endl;
+  cout << time  <<" ns for reversed and good data alligment loop" << endl;
 
   // Populate array with bad data alligment, with random numbers
   begin = high_resolution_clock::now(); // Start the timer
@@ -55,7 +55,7 @@ int main(){
   }
   end = high_resolution_clock::now();   // End the timer
   time = duration_cast<nanoseconds>(end - begin).count();
-  cout << time*1e-6  <<" ms for bad data alligment loop" << endl;  
+  cout << time  <<" ns for bad data alligment loop" << endl;  
 
   // Populate array with good data alligment, with random numbers
   begin = high_resolution_clock::now(); // Start the timer
@@ -66,7 +66,7 @@ int main(){
   }
   end = high_resolution_clock::now();   // End the timer
   time = duration_cast<nanoseconds>(end - begin).count();
-  cout << time*1e-6  <<" ms for good data alligment loop" << endl;  
+  cout << time  <<" ns for good data alligment loop" << endl;  
   
   return 0;
 }

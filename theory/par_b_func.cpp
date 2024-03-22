@@ -52,8 +52,8 @@ int main(){
 
   double timeomp = end_omp - start_omp; //seconds OpenMP
   walltime = duration_cast<nanoseconds>(end - begin).count();
-  cout << endl << "Chrono wall time = " << walltime*1e-6  <<" ms" << endl;
-  cout << "OpenMP wall time = " << timeomp*1000.   <<" ms" << endl;
+  cout << endl << "Chrono wall time = " << walltime  <<" ns" << endl;
+  cout << "OpenMP wall time = " << timeomp*1e9   <<" ns" << endl;
 
   // Print the results
   cout << fixed << setprecision(0);

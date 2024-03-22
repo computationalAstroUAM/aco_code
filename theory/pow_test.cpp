@@ -20,19 +20,19 @@ int main(){
   a = x*x*x;
   end = high_resolution_clock::now();   // End the timer
   time = duration_cast<nanoseconds>(end - begin).count(); 
-  cout << "Time for x*x*x = " << time*1e-6  <<" ms" << endl;
+  cout << "Time for x*x*x = " << time  <<" ns" << endl;
 
   begin = high_resolution_clock::now(); // Start the timer
   a = pow(x,3);
   end = high_resolution_clock::now();   // End the timer
   time = duration_cast<nanoseconds>(end - begin).count(); 
-  cout << "Time for pow(x,3) = " << time*1e-6  <<" ms" << endl;
+  cout << "Time for pow(x,3) = " << time  <<" ns" << endl;
   
   begin = high_resolution_clock::now(); // Start the timer
   a = pow3(x);
   end = high_resolution_clock::now();   // End the timer
   time = duration_cast<nanoseconds>(end - begin).count(); 
-  cout << "Time for pow3(x) = " << time*1e-6  <<" ms" << endl;
+  cout << "Time for pow3(x) = " << time  <<" ns" << endl;
   
   return 0;
 }

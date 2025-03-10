@@ -37,8 +37,8 @@ int main(){
 
   // Populate array in reverse order and good data alligment
   begin = high_resolution_clock::now(); // Start the timer
-  for (i=ncol-1; i>=0; i--){
-    for(j=nrow-1; j>=0; j--){
+  for (i=nrow-1; i>=0; i--){
+    for(j=ncol-1; j>=0; j--){
       DD[i][j]= distribution(gen);
     }
   }
@@ -59,8 +59,8 @@ int main(){
 
   // Populate array with good data alligment, with random numbers
   begin = high_resolution_clock::now(); // Start the timer
-  for (i=0; i<ncol; i++){
-    for(j=0 ; j<nrow; j++){
+  for (i=0; i<nrow; i++){
+    for(j=0 ; j<ncol; j++){
       DD[i][j]= distribution(gen);
     }
   }

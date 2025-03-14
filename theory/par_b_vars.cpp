@@ -23,7 +23,7 @@ int main(){
   a[0] = STARTVALUE;
   int i,j;
   float b;
-  #pragma omp parallel private(i,j) shared(a,b) 
+#pragma omp parallel private(a,N) shared(i,j,b) 
   {
     int ID = omp_get_thread_num();
     # pragma omp for 

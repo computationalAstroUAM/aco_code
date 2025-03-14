@@ -1,4 +1,4 @@
-// Compilation: g++ -o p -fopenmp par_b_func.cpp
+// Compilation: g++ -O0 -o p -fopenmp par_b_func.cpp
 #include <iostream>
 #include <chrono>
 #include <iomanip>

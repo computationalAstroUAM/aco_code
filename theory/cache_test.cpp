@@ -14,12 +14,12 @@ int main(){
   double time=0.;
   high_resolution_clock::time_point begin, end;
   
-  int nrow=10000, ncol=10000;
+  int nrow=10000, ncol=10000; // Large enough array to see cache misses properly
   vector<vector<int>> DD(nrow, vector<int>(ncol, 0));
 
   cout << scientific << setprecision(2);
 
-  // Pre-generate random numbers followint a uniform dis. between 0 and 99
+  // Pre-generate random numbers following a uniform dis. between 0 and 99
   random_device rd;  // Seed generator
   mt19937 gen(rd()); // Mersenne Twister engine
   uniform_int_distribution<int> distribution(0, 99);
